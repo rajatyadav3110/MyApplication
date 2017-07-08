@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
                 new Button.OnClickListener(){
 
-                    public void onClick(View v){
+                    public void onClick(View view){
 
                         checkAndConfirmRegistrationDetails(v);
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         );*/
     }
 
-    public void checkAndConfirmRegistrationDetails(View v){
+    public void checkAndConfirmRegistrationDetails(View view){
 
         String name = ((EditText)findViewById(R.id.name)).getText().toString();
         String dob = ((EditText)findViewById(R.id.dob)).getText().toString();

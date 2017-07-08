@@ -3,6 +3,7 @@ package com.ryt.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.TextView;
 
@@ -23,20 +24,24 @@ public class ConfirmDetailsActivity extends AppCompatActivity {
 
             if (bundle != null) {
 
-                ((TextView) findViewById(R.id.name)).setText(bundle.get("name").toString());
-                ((TextView) findViewById(R.id.dob)).setText(bundle.get("dob").toString());
-                ((TextView) findViewById(R.id.gender)).setText(bundle.get("gender").toString());
-                ((TextView) findViewById(R.id.fatherName)).setText(bundle.get("fatherName").toString());
-                ((TextView) findViewById(R.id.motherName)).setText(bundle.get("motherName").toString());
-                ((TextView) findViewById(R.id.mobile)).setText(bundle.get("mobile").toString());
-                ((TextView) findViewById(R.id.email)).setText(bundle.get("email").toString());
-                ((TextView) findViewById(R.id.address)).setText(bundle.get("address").toString());
+                ((TextView) findViewById(R.id.name)).setText(bundle.get("name") != null ? bundle.get("name").toString() : "");
+                ((TextView) findViewById(R.id.dob)).setText(bundle.get("name") != null ? bundle.get("dob").toString() : "");
+                ((TextView) findViewById(R.id.gender)).setText(bundle.get("name") != null ? bundle.get("gender").toString() : "");
+                ((TextView) findViewById(R.id.fatherName)).setText(bundle.get("name") != null ? bundle.get("fatherName").toString() : "");
+                ((TextView) findViewById(R.id.motherName)).setText(bundle.get("name") != null ? bundle.get("motherName").toString() : "");
+                ((TextView) findViewById(R.id.mobile)).setText(bundle.get("name") != null ? bundle.get("mobile").toString() : "");
+                ((TextView) findViewById(R.id.email)).setText(bundle.get("name") != null ? bundle.get("email").toString() : "");
+                ((TextView) findViewById(R.id.address)).setText(bundle.get("name") != null ? bundle.get("address").toString() : "");
 
             }
 
         } catch (Exception e) {
             Log.e(TAG, "Error", e);
         }
+
+    }
+
+    public void submitRegistrationDetails(View view){
 
     }
 }

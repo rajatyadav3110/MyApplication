@@ -174,11 +174,12 @@
         android:text="@string/upload"
         android:id="@+id/button"
         android:layout_gravity="bottom|center"
-        android:clickable="false"
+        android:clickable="true"
         android:focusable="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="checkAndConfirmRegistrationDetails" />
+        android:onClick="submitRegistrationDetails"
+        android:contextClickable="true" />
 
 </RelativeLayout>

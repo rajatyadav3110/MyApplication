@@ -1,4 +1,4 @@
-package common;
+package com.rty.myapplication.common;
 
 /**
  * Created by infotech on 09-07-2017.
